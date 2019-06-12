@@ -1,0 +1,71 @@
+buildCmd: mvn -e -X -Dmaven.test.skip=true compile
+testCmd: true
+lineLength: 4096
+skipVerification: true
+cbmcArguments:
+  # Do not generate coverage comments on generated tests.
+  java-generate-no-comments: true
+  # Constrain the size of arrays created in the analyzed code.
+  java-max-vla-length: 100000
+units:
+ - target:
+   - dir: presto-thrift-connector-api/target/classes
+     file: com/facebook/presto/connector/thrift/api/datatypes/PrestoThriftTypeUtils.class
+     sourceDir: presto-thrift-connector-api/src/main/java
+     sourceFile: com/facebook/presto/connector/thrift/api/datatypes/PrestoThriftTypeUtils.java
+   - dir: presto-thrift-connector-api/target/classes
+     file: com/facebook/presto/connector/thrift/api/PrestoThriftBlock.class
+     sourceDir: presto-thrift-connector-api/src/main/java
+     sourceFile: com/facebook/presto/connector/thrift/api/PrestoThriftBlock.java
+   - dir: presto-spi/target/classes
+     file: com/facebook/presto/spi/type/Type.class
+     sourceDir: presto-spi/src/main/java
+     sourceFile: com/facebook/presto/spi/type/Type.java
+   - dir: presto-spi/target/classes
+     file: com/facebook/presto/spi/RecordSet.class
+     sourceDir: presto-spi/src/main/java
+     sourceFile: com/facebook/presto/spi/RecordSet.java
+   - dir: presto-spi/target/classes
+     file: com/facebook/presto/spi/block/Block.class
+     sourceDir: presto-spi/src/main/java
+     sourceFile: com/facebook/presto/spi/block/Block.java
+ - target:
+   - dir: presto-main/target/classes
+     file: com/facebook/presto/operator/scalar/MathFunctions$TruncateN.class
+     sourceDir: presto-main/src/main/java
+     sourceFile: com/facebook/presto/operator/scalar/MathFunctions.java
+ - target:
+   - dir: presto-spi/target/classes
+     file: com/facebook/presto/spi/block/BlockUtil.class
+     sourceDir: presto-spi/src/main/java
+     sourceFile: com/facebook/presto/spi/block/BlockUtil.java
+ - target:
+   - dir: presto-main/target/classes
+     file: com/facebook/presto/type/BooleanOperators.class
+     sourceDir: presto-main/src/main/java
+     sourceFile: com/facebook/presto/type/BooleanOperators.java
+ - target:
+   - dir: presto-hive/target/classes
+     file: com/facebook/presto/hive/util/DecimalUtils.class
+     sourceDir: presto-hive/src/main/java
+     sourceFile: com/facebook/presto/hive/util/DecimalUtils.java
+ - target:
+   - dir: presto-orc/target/classes
+     file: com/facebook/presto/orc/stream/LongOutputStreamV2$SerializationUtils.class
+     sourceDir: presto-orc/src/main/java
+     sourceFile: com/facebook/presto/orc/stream/LongOutputStreamV2.java
+ - target:
+   - dir: presto-cli/target/classes
+     file: com/facebook/presto/cli/FormatUtils.class
+     sourceDir: presto-cli/src/main/java
+     sourceFile: com/facebook/presto/cli/FormatUtils.java
+ - target:
+   - dir: presto-main/target/classes
+     file: com/facebook/presto/operator/scalar/MathFunctions$RoundN.class
+     sourceDir: presto-main/src/main/java
+     sourceFile: com/facebook/presto/operator/scalar/MathFunctions.java
+ - target:
+   - dir: presto-main/target/classes
+     file: com/facebook/presto/operator/scalar/MathFunctions$Round.class
+     sourceDir: presto-main/src/main/java
+     sourceFile: com/facebook/presto/operator/scalar/MathFunctions.java
