@@ -180,26 +180,3 @@ units:
      file: com/facebook/presto/cli/FormatUtils.class
      sourceDir: presto-cli/src/main/java
      sourceFile: com/facebook/presto/cli/FormatUtils.java
- - target:
-   - dir: presto-hive/target/classes
-     file: com/facebook/presto/hive/HiveBooleanParser.class
-     sourceDir: presto-hive/src/main/java
-     sourceFile: com/facebook/presto/hive/HiveBooleanParser.java
- - target:
-   - dir: presto-hive/target/classes
-     file: com/facebook/presto/hive/util/DecimalUtils.class
-     sourceDir: presto-hive/src/main/java
-     sourceFile: com/facebook/presto/hive/util/DecimalUtils.java
-   - dir: presto-spi/target/classes
-     file: com/facebook/presto/spi/type/Decimals.class
-     sourceDir: presto-spi/src/main/java
-     sourceFile: com/facebook/presto/spi/type/Decimals.java
-   - dir: presto-spi/target/classes
-     file: com/facebook/presto/spi/type/UnscaledDecimal128Arithmetic.class
-     sourceDir: presto-spi/src/main/java
-     sourceFile: com/facebook/presto/spi/type/UnscaledDecimal128Arithmetic.java
- - target:
-   - dir: presto-spi/target/classes
-     file: com/facebook/presto/spi/block/BlockUtil.class
-     sourceDir: presto-spi/src/main/java
-     sourceFile: com/facebook/presto/spi/block/BlockUtil.java
